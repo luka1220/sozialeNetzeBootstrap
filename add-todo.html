@@ -19,14 +19,15 @@
       </div>
       <ul class="nav nav-tabs" role="tablist">
         <li ><a href="index.html">Start</a></li>
-        <li><a href="#">Demo</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li class="active"><a href="#">Add TODO</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li class="active"><a href="add-todo.html">Add TODO</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        
       </ul>
 </header>
 <div class="container">
 	<main class="row">
-		<article class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		<article class="col-xs-12">
 		
 		 <form>
 		     <label for="inputText">TODO Discription:</label>
@@ -34,7 +35,8 @@
 		     maxlength="160" rows="4" required></textarea>
 		     <label for="inputText">Deadline:</label>
 		     <input type="date" name="deadline" required/>
-		     <input class="btn btn-success" type="submit" value="Submit"/>
+		     <input class="btn btn-success" type="submit" value="Submit"
+		     style="float: right"/>
 		 </form>
 		</article>
 	</main>
