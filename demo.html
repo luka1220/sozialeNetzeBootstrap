@@ -20,14 +20,27 @@
       <ul class="nav nav-tabs" role="tablist">
         <li><a href="index.html">Start</a></li>
         <li class="active"><a href="demo.html">Demo</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
         <li><a href="add-todo.html">Add TODO</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        
       </ul>
 </header>
 <div class="container">
 	<main class="row">
 		<article class="col-xs-12">
-		
+		<form>
+		     <label for="inputText">To edit:</label>
+		     <textarea class="form-control" id="inputText"
+		     maxlength="160" rows="4" required>
+Define your new TODO here 
+you can edit everything, good luck!
+             </textarea>
+		     <input type="date" name="deadline" value="2018-04-30" required/>
+		     <input type="number" name="prozentage" value=20 step="5" 
+		     max="100" min="0" style="width: 50px" required/>
+		     <label for="number">%OMA </label>
+		     <input class="btn btn-warning" type="submit" value="Commit"/>
+		 </form>
 		</article>
 	</main>
 </div>
