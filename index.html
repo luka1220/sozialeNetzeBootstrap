@@ -14,67 +14,99 @@
 			<div class="page-header">
 				<h1>Welcome to TODOs</h1>
 			</div>
-			<ul class="nav nav-tabs" role="tablist">
-				<li class="active"><a href="index.html">Start</a></li>
-				<li><a href="demo.html">Demo</a></li>
-				<li><a href="add-todo.html">Add TODO</a></li>
-				<li><a href="impressum.html">Impressum</a></li>
-				
+			<ul class="nav nav-tabs" role="tablist" id="menu-tabs">
+				<li class="nav-item active">
+					<a class="nav-link active" href="#list" id="list-tab" data-toggle="tab" role="tab">Start</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#add" id="add-tab" data-toggle="tab" role="tab">Add ToDo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#demo" id="demo-tab" data-toggle="tab" role="tab">Demo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#imprint" id="imprint-tab" data-toggle="tab" role="tab">Imprint</a>
+				</li>
 			</ul>
 		</header>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
-					<table class="table table-bordered">
-						
-						<thread>
-							<tr>
-								<td colspan="5">
-									<a type="button" class="btn btn-success" href="add-todo.html">add new TODO</a>
-								</td>
-							</tr>
-							<tr>
-								<th>Nr.</th>
-								<th colspan="5">TODOs</th>
-							</tr>
-						</thread>
-						<tbody>
-							<tr>
-								<td rowspan="2">1.</td>
-								<td colspan="4">blah blah </td>
-							</tr>
-							<tr>
-								<td><time>26.04.2018</time></td>
-								<td>
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%; color: black"><span class="sr-only">40% abgeschlossen (Erfolg)</span>%40</div>
-								</td>
-								<td><a href="demo.html" class="btn btn-xs btn-warning">edit</a></td>
-								<td><button class="btn btn-xs btn-danger">delite</button></td>
-							</tr>
-							<tr>
-								<td rowspan="2">2.</td>
-								<td colspan="4">blah blah Computer programs can learn useful cognitive skills. This lecture tries to communicate an intuitive understanding of elementary concepts in machine learning, their historical development</td>
-							</tr>
-							<tr>
-								<td><time>26.04.2018</time></td>
-								<td>
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%; color: black"><span class="sr-only">20% abgeschlossen (Erfolg)</span>%20</div>
-								</td>
-								<td><a href="demo.html" class="btn btn-xs btn-warning">edit</a></td>
-								<td><button class="btn btn-xs btn-danger">delite</button></td>
-								
-							</tr>
-						</tbody>
-					</table>
+				<div class="col-xs-12 tab-content" id="menu-tabsContent">
+					<div class="tab-pane active" id="list" role="tabpanel">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Nr.</th>
+									<th colspan="5">TODOs</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2">1.</td>
+									<td colspan="4">blah blah </td>
+								</tr>
+								<tr>
+									<td><time>26.04.2018</time></td>
+									<td>
+										<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%; color: black"><span class="sr-only">40% abgeschlossen (Erfolg)</span>%40</div>
+									</td>
+									<td><a href="demo.html" class="btn btn-xs btn-warning">edit</a></td>
+									<td><button class="btn btn-xs btn-danger">delite</button></td>
+								</tr>
+								<tr>
+									<td rowspan="2">2.</td>
+									<td colspan="4">blah blah Computer programs can learn useful cognitive skills. This lecture tries to communicate an intuitive understanding of elementary concepts in machine learning, their historical development</td>
+								</tr>
+								<tr>
+									<td><time>26.04.2018</time></td>
+									<td>
+										<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%; color: black"><span class="sr-only">20% abgeschlossen (Erfolg)</span>%20</div>
+									</td>
+									<td><a href="demo.html" class="btn btn-xs btn-warning">edit</a></td>
+									<td><button class="btn btn-xs btn-danger">delite</button></td>
+									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tab-pane" id="demo" role="tabpanel">
+						<form>
+							<label for="inputText">To edit:</label>
+							<textarea class="form-control" id="inputText"
+							maxlength="160" rows="4" required>
+							Define your new TODO here
+							you can edit everything, good luck!
+							</textarea>
+							<input type="date" name="deadline" value="2018-04-30" required/>
+							<input type="number" name="prozentage" value=20 step="5"
+							max="100" min="0" style="width: 60px" required/>
+							<label for="number">%OMA </label>
+							<input class="btn btn-warning" type="submit" value="Commit"
+							style="float: right" formAction="index.html"/>
+						</form>
+					</div>
+					<div class="tab-pane" id="add" role="tabpanel">
+						<form>
+							<label for="inputText">TODO Discription:</label>
+							<textarea class="form-control" id="inputText" placeholder="Define your new TODO here"
+							maxlength="160" rows="4" required></textarea>
+							<label for="inputText">Deadline:</label>
+							<input type="date" name="deadline" required/>
+							<input class="btn btn-success" type="submit" value="Submit"
+							style="float: right" formAction="index.html"/>
+						</form>
+					</div>
+					<div class="tab-pane" id="imprint" role="tabpanel">
+						<article class="col-xs-12">
+							<p><br> Contributors: </p>
+							<p><a href="https://github.com/cosmonawt">Leo</a></p>
+							<p><a href="https://github.com/luka1220">Luka Seamus Stärk</a></p>
+						</article>
+					</div>
 				</div>
-				<article class="col-sm-6 col-xs-12">
-					<table>
-						<tr>
-							<td>TODO</td>
-						</tr>
-					</table>
-				</article>
 			</div>
 		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 	</body>
 </html>
